@@ -9,5 +9,5 @@
   "issue_tracker": "https://github.com/YamPol02/axhome-cloud/issues",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "version": "0.5.2"
+  "version": "0.5.3"
 }

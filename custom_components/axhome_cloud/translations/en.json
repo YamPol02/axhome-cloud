@@ -4,14 +4,14 @@
     "step": {
       "reauth_confirm": {
         "title": "Hik-Connect account details",
-        "description": "Enter the password again for {username}.",
+        "description": "| ![Hik-Connect]({brand_icon}) |\n|:---:|\n\nEnter the password again for {username}.",
         "data": {
           "password": "Password"
         }
       },
       "user": {
         "title": "Hik-Connect account details",
-        "description": "Sign in with your Hik-Connect credentials. They are stored privately in Home Assistant.",
+        "description": "| ![Hik-Connect]({brand_icon}) |\n|:---:|\n\nSign in with your Hik-Connect credentials. Home Assistant stores them privately.",
         "data": {
           "username": "Email or phone number",
           "password": "Password"

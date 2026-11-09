@@ -6,7 +6,7 @@ Integración para Home Assistant para paneles AX HOME por medio de Hik-Connect. 
 
 **Autor y mantenedor:** [YamPol02](https://github.com/YamPol02)
 
-**Versión de la integración:** `0.5.2` · **Commit publicado:** `7547d2a` · [Historial de versiones](https://github.com/YamPol02/axhome-cloud/releases)
+**Versión de la integración:** `0.5.3` · [Historial de versiones](https://github.com/YamPol02/axhome-cloud/releases)
 
 La versión indicada corresponde a `manifest.json`. En HACS, un repositorio sin Releases puede identificarse por el hash del commit; al publicar Releases etiquetados, HACS muestra el número de versión y permite elegir entre las versiones recientes y la rama principal.
 

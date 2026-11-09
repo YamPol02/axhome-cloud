@@ -13,6 +13,10 @@ from .hikconnect.exceptions import LoginError
 
 _LOGGER = logging.getLogger(__name__)
 DOMAIN = "axhome_cloud"
+BRAND_ICON = (
+    "https://raw.githubusercontent.com/YamPol02/axhome-cloud/main/"
+    "custom_components/axhome_cloud/brand/icon.png"
+)
 
 
 class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -42,10 +46,16 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             api = HikConnect()
             try:
                 async with asyncio.timeout(25):
-                    await api.login(self._reauth_entry.data["username"], user_input["password"])
+                    await api.login(
+                        self._reauth_entry.data["username"],
+                        user_input["password"],
+                    )
                 self.hass.config_entries.async_update_entry(
                     self._reauth_entry,
-                    data={**self._reauth_entry.data, "password": user_input["password"]},
+                    data={
+                        **self._reauth_entry.data,
+                        "password": user_input["password"],
+                    },
                 )
                 await self.hass.config_entries.async_reload(self._reauth_entry.entry_id)
                 return self.async_abort(reason="reauth_successful")
@@ -59,7 +69,10 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             step_id="reauth_confirm",
             data_schema=vol.Schema({vol.Required("password"): str}),
             errors=errors,
-            description_placeholders={"username": self._reauth_entry.data["username"]},
+            description_placeholders={
+                "username": self._reauth_entry.data["username"],
+                "brand_icon": BRAND_ICON,
+            },
         )
 
     async def async_step_user(self, user_input=None):
@@ -71,7 +84,9 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             api = HikConnect()
             try:
                 async with asyncio.timeout(25):
-                    await api.login(user_input["username"].strip(), user_input["password"])
+                    username = user_input["username"].strip()
+                    password = user_input["password"]
+                    await api.login(username, password)
                     self._devices = {
                         device["serial"]: device async for device in api.get_devices()
                     }
@@ -79,8 +94,8 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     errors["base"] = "no_devices"
                 else:
                     self._credentials = {
-                        "username": user_input["username"].strip(),
-                        "password": user_input["password"],
+                        "username": username,
+                        "password": password,
                     }
                     return await self.async_step_device()
             except LoginError:
@@ -98,7 +113,12 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             vol.Required("username"): str,
             vol.Required("password"): str,
         })
-        return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
+        return self.async_show_form(
+            step_id="user",
+            data_schema=schema,
+            errors=errors,
+            description_placeholders={"brand_icon": BRAND_ICON},
+        )
 
     async def async_step_device(self, user_input=None):
         self.context["title_placeholders"] = {

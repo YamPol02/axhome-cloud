@@ -4,14 +4,14 @@
     "step": {
       "reauth_confirm": {
         "title": "Datos de tu cuenta de Hik-Connect",
-        "description": "Vuelve a introducir la contraseña de {username}.",
+        "description": "| ![Hik-Connect]({brand_icon}) |\n|:---:|\n\nVuelve a introducir la contraseña de {username}.",
         "data": {
           "password": "Contraseña"
         }
       },
       "user": {
         "title": "Datos de tu cuenta de Hik-Connect",
-        "description": "Inicia sesión con las credenciales que usas en Hik-Connect. Se guardan de forma privada en Home Assistant.",
+        "description": "| ![Hik-Connect]({brand_icon}) |\n|:---:|\n\nInicia sesión con las credenciales que usas en Hik-Connect. Home Assistant las guarda de forma privada.",
         "data": {
           "username": "Correo o número de teléfono",
           "password": "Contraseña"
