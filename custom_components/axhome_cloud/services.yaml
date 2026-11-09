@@ -1,0 +1,23 @@
+clear_alarm:
+  name: Restablecer alarma
+  description: Envía ClearAlarm al área seleccionada. No equivale a desarmar. Efecto sobre la sirena pendiente de verificar en el panel.
+  fields:
+    code:
+      name: PIN
+      required: true
+      selector:
+        text:
+          type: password
+  target:
+    entity:
+      integration: axhome_cloud
+      domain: alarm_control_panel
+
+diagnose:
+  name: Diagnóstico AX HOME
+  description: Solo consulta estado y sensores. No arma, desarma ni silencia.
+  fields:
+    device_serial:
+      required: true
+      selector:
+        text:

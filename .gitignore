@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.HA_VERSION
+home-assistant_v2.db*
+secrets.yaml
+.storage/

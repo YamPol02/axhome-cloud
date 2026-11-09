@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "reauth_confirm": {
+        "title": "Renovar acceso Hik-Connect",
+        "description": "Vuelve a introducir la contraseña de {username}.",
+        "data": {"password": "Contraseña"}
+      },
+      "user": {
+        "title": "Cuenta Hik-Connect",
+        "description": "Credenciales usadas por AX HOME Cloud. Se guardan en la entrada privada de Home Assistant.",
+        "data": {"username": "Usuario o correo", "password": "Contraseña"}
+      },
+      "device": {
+        "title": "Selecciona el panel y el área",
+        "description": "Elige AX HOME. En cuentas propietarias, deja Propietario.",
+        "data": {"device_serial": "Dispositivo", "area_id": "Área (subSystemID)", "cloud_user_type": "Tipo de cuenta"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Hik-Connect rechazó las credenciales. Si aparece CAPTCHA, inicia sesión en la app e inténtalo de nuevo.",
+      "cannot_connect": "No se pudo conectar a Hik-Connect.",
+      "no_devices": "La cuenta no devolvió dispositivos.",
+      "unknown": "Error inesperado. Revisa el registro de Home Assistant."
+    },
+    "abort": {
+      "already_configured": "Este panel ya está configurado.",
+      "setup_error": "Vuelve a iniciar la configuración de AX HOME Cloud.",
+      "reauth_successful": "La sesión se renovó correctamente."
+    }
+  }
+}

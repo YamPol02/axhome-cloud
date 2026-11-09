@@ -1,0 +1,13 @@
+{
+  "domain": "axhome_cloud",
+  "name": "AX HOME Cloud",
+  "codeowners": [
+    "@YamPol02"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/YamPol02/axhome-cloud",
+  "issue_tracker": "https://github.com/YamPol02/axhome-cloud/issues",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "version": "0.5.0"
+}
