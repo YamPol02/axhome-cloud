@@ -27,6 +27,9 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth(self, entry_data):
         """Ask for a fresh cloud password after an expired/revoked login."""
+        self.context["title_placeholders"] = {
+            "name": "Datos de tu cuenta de Hik-Connect"
+        }
         entry_id = self.context.get("entry_id")
         self._reauth_entry = self.hass.config_entries.async_get_entry(entry_id)
         if self._reauth_entry is None:
@@ -60,6 +63,9 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         )
 
     async def async_step_user(self, user_input=None):
+        self.context["title_placeholders"] = {
+            "name": "Datos de tu cuenta de Hik-Connect"
+        }
         errors = {}
         if user_input is not None:
             api = HikConnect()
@@ -95,6 +101,9 @@ class AXHomeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
 
     async def async_step_device(self, user_input=None):
+        self.context["title_placeholders"] = {
+            "name": "Selecciona el panel y el área"
+        }
         if not self._devices or not self._credentials:
             return self.async_abort(reason="setup_error")
         if user_input is not None:

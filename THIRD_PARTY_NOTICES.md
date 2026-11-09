@@ -35,5 +35,5 @@ SOFTWARE.
 
 ## Hik-Connect branding
 
-The unmodified Hik-Connect logo in `custom_components/axhome_cloud/brand/` is a Hikvision trademark, sourced from Hikvision Iberia. It is used only to identify the cloud service accessed by AX HOME Cloud; the project is independent and is not endorsed by Hikvision.
+The Hik-Connect app symbol in `custom_components/axhome_cloud/brand/` is a Hikvision trademark, cropped without modification from the official Hik-Connect logo sourced from Hikvision Iberia. It is used only to identify the cloud service accessed by AX HOME Cloud; the project is independent and is not endorsed by Hikvision.
 Source: https://iberia.hikvision.com/es/hik-connect

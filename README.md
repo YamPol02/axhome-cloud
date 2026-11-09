@@ -1,5 +1,7 @@
 # AX HOME Cloud
 
+<p align="center"><img src="https://raw.githubusercontent.com/YamPol02/axhome-cloud/main/custom_components/axhome_cloud/brand/icon.png" alt="Hik-Connect" width="112"></p>
+
 Integración para Home Assistant para paneles AX HOME por medio de Hik-Connect. El repositorio reúne en una sola instalación HACS el cliente de nube, las entidades y las tarjetas Lovelace.
 
 **Autor y mantenedor:** [YamPol02](https://github.com/YamPol02)

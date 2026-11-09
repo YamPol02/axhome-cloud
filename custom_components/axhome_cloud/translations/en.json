@@ -1,0 +1,42 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "reauth_confirm": {
+        "title": "Hik-Connect account details",
+        "description": "Enter the password again for {username}.",
+        "data": {
+          "password": "Password"
+        }
+      },
+      "user": {
+        "title": "Hik-Connect account details",
+        "description": "Sign in with your Hik-Connect credentials. They are stored privately in Home Assistant.",
+        "data": {
+          "username": "Email or phone number",
+          "password": "Password"
+        }
+      },
+      "device": {
+        "title": "Select the panel and area",
+        "description": "Choose AX HOME. For owner accounts, leave Owner selected.",
+        "data": {
+          "device_serial": "Device",
+          "area_id": "Area (subSystemID)",
+          "cloud_user_type": "Account type"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Hik-Connect rejected the credentials. If a CAPTCHA appears, sign in through the app and try again.",
+      "cannot_connect": "Could not connect to Hik-Connect.",
+      "no_devices": "The account did not return any devices.",
+      "unknown": "Unexpected error. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This panel is already configured.",
+      "setup_error": "Start AX HOME Cloud setup again.",
+      "reauth_successful": "The session was renewed successfully."
+    }
+  }
+}
