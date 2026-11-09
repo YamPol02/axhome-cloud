@@ -4,6 +4,22 @@ Integración para Home Assistant para paneles AX HOME por medio de Hik-Connect. 
 
 **Autor y mantenedor:** [YamPol02](https://github.com/YamPol02)
 
+## Vista real de las tarjetas
+
+Capturas de las tarjetas ejecutándose en Home Assistant. Los estados y nombres que aparecen son ejemplos de una instalación y pueden diferir de los tuyos.
+
+### Seguridad AX HOME
+
+![Tarjeta de seguridad AX HOME en Home Assistant](https://raw.githubusercontent.com/YamPol02/axhome-cloud/main/docs/images/axhome-security-card.png)
+
+La tarjeta muestra conexión y estado reportado por el panel. Mantén pulsada la tarjeta para navegar a la vista de sensores, si configuraste `hold_action`. Al elegir **En casa** o **Fuera**, primero revisa los sensores asignados a ese modo: si hay alguno abierto, muestra un aviso temporal y no abre el teclado ni envía la orden. Si todos están cerrados, solicita el PIN y envía la orden; después espera al estado confirmado por Hik-Connect.
+
+### Sensores AX HOME
+
+![Tarjeta de sensores AX HOME en Home Assistant](https://raw.githubusercontent.com/YamPol02/axhome-cloud/main/docs/images/axhome-sensors-card.png)
+
+La cuadrícula adapta el número de columnas a la pantalla. Un toque en un sensor abre sus detalles; la tarjeta destaca aperturas y alertas disponibles (por ejemplo, sabotaje, batería baja o pérdida de conexión) y mantiene más discretos los estados normales. En la configuración se asignan sensores de forma independiente para **En casa** y **Fuera de casa**; un sensor puede pertenecer a ambos modos.
+
 ## Funciones
 
 - Inicio de sesión propio en Hik-Connect; no requiere instalar la integración `hikconnect` de otra persona.

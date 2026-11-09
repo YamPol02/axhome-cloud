@@ -31,3 +31,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+## Hik-Connect branding
+
+The unmodified Hik-Connect logo in `custom_components/axhome_cloud/brand/` is a Hikvision trademark, sourced from Hikvision Iberia. It is used only to identify the cloud service accessed by AX HOME Cloud; the project is independent and is not endorsed by Hikvision.
+Source: https://iberia.hikvision.com/es/hik-connect

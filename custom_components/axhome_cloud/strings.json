@@ -2,19 +2,28 @@
   "config": {
     "step": {
       "reauth_confirm": {
-        "title": "Renovar acceso Hik-Connect",
+        "title": "Datos de tu cuenta de Hik-Connect",
         "description": "Vuelve a introducir la contraseña de {username}.",
-        "data": {"password": "Contraseña"}
+        "data": {
+          "password": "Contraseña"
+        }
       },
       "user": {
-        "title": "Cuenta Hik-Connect",
-        "description": "Credenciales usadas por AX HOME Cloud. Se guardan en la entrada privada de Home Assistant.",
-        "data": {"username": "Usuario o correo", "password": "Contraseña"}
+        "title": "Datos de tu cuenta de Hik-Connect",
+        "description": "Inicia sesión con las credenciales que usas en Hik-Connect. Se guardan de forma privada en Home Assistant.",
+        "data": {
+          "username": "Correo o número de teléfono",
+          "password": "Contraseña"
+        }
       },
       "device": {
         "title": "Selecciona el panel y el área",
         "description": "Elige AX HOME. En cuentas propietarias, deja Propietario.",
-        "data": {"device_serial": "Dispositivo", "area_id": "Área (subSystemID)", "cloud_user_type": "Tipo de cuenta"}
+        "data": {
+          "device_serial": "Dispositivo",
+          "area_id": "Área (subSystemID)",
+          "cloud_user_type": "Tipo de cuenta"
+        }
       }
     },
     "error": {
