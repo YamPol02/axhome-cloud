@@ -12,6 +12,7 @@ from homeassistant.components.http import StaticPathConfig
 from homeassistant.const import Platform
 from homeassistant.core import SupportsResponse
 from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady, HomeAssistantError
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.storage import Store
 from .api_client import async_get_api
 from .hikconnect.api import HikConnect
@@ -20,6 +21,7 @@ from .security import PinSecurity
 
 _LOGGER = logging.getLogger(__name__)
 PLATFORMS = [Platform.ALARM_CONTROL_PANEL, Platform.SENSOR]
+CONFIG_SCHEMA = cv.config_entry_only_config_schema("axhome_cloud")
 
 async def async_setup(hass, config):
     domain_data = hass.data.setdefault("axhome_cloud", {})

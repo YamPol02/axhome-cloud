@@ -4,7 +4,13 @@
   "codeowners": [
     "@YamPol02"
   ],
+  "categories": [
+    "security_safety.alarm_systems"
+  ],
   "config_flow": true,
+  "dependencies": [
+    "http"
+  ],
   "documentation": "https://github.com/YamPol02/axhome-cloud",
   "issue_tracker": "https://github.com/YamPol02/axhome-cloud/issues",
   "integration_type": "hub",
