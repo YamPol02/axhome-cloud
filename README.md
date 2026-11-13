@@ -53,7 +53,7 @@ La primera migración conserva el PIN local almacenado por Home Assistant y las 
 La tarjeta de seguridad conserva los tipos usados por las versiones entregadas durante este proyecto, incluido `axhome-security-fast-v35-card`:
 
 ```yaml
-type: custom:axhome-security-fast-v35-card
+type: custom:axhome-security-fast-v044-card
 entity: alarm_control_panel.ax_home_area_1
 title: AX HOME
 area_name: Área 1
